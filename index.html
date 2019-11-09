@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>A Virtual Bathtub Cow</title>
+        <meta name="description" content="A Virtual Bathtub Cow">
+		<style>
+		    html, body, #wrapper {
+		       height:100%;
+		       width: 100%;
+		       margin: 0;
+		       padding: 0;
+		       border: 0;
+		    }
+		    #wrapper td {
+		       vertical-align: middle;
+		       text-align: center;
+		   	}
+            audio {
+                display: none;
+                position: fixed;
+                margin-left: 1000000px;
+            }
+		</style>
+
+		<script type="text/javascript">
+            var playCount = 0
+            function init() {
+                var splash=document.getElementById("splash"); 
+            }
+            function playSound() { 
+                splash.load();
+                splash.play();
+                playCount++
+            }                 
+        </script>
+
+	</head>
+	<body>
+
+		<table id="wrapper">
+		  <tr>
+		    <td>
+		    	<img onclick="playSound();" src="virtual-bathtub-cow.gif" alt="a virtual bathtub cow">
+		    	<audio controls="controls" id='splash'>
+                    <source src="splash.mp3" type="audio/mp3">
+                </audio>
+		    </td>
+		  </tr>
+		</table>
+	</body>
+
+</html>
